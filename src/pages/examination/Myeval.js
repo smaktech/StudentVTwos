@@ -533,7 +533,7 @@ export default function User(props) {
                                     }}>
 
                                 </Form>
-                                <Form.Control type="text" name='answer' readOnly={true} value={res.answerstud} onChange={(e) => setAnswer(e.target.value)} placeholder='Answer' as="textarea" rows={5} ></Form.Control>
+                                <Form.Control type="text" name='answer' readOnly={true} value={res.answer} onChange={(e) => setAnswer(e.target.value)} placeholder='Answer' as="textarea" rows={5} ></Form.Control>
                             </Form.Group>
 
                         </div>
