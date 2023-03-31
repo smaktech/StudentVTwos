@@ -1,0 +1,239 @@
+.modal.fade {
+    z-index: 10000000 !important;
+  } 
+
+
+  .CircularProgressbar-background {
+    fill: #b29603;
+  }
+
+  .react-calendar
+  {
+    border:none !important;
+  }
+
+
+#outlined-dropdown
+{
+    border: 1px solid rgba(255, 255, 255, 0.23) !important;
+    padding: 5px 30px 5px 5px !important;
+    font-size:14px
+}  
+
+
+#outlined-dropdown ~ fieldset
+{
+  border-width: 0px !important;
+} 
+
+#outlined-dropdown-notes
+{
+    border: 1px solid rgba(145, 158, 171, 0.32) !important;
+    /* padding: 5px 30px 5px 5px !important; */
+    border-radius:10px;
+    font-size:14px
+}  
+
+
+#outlined-dropdown-notes ~ fieldset
+{
+  border-width: 0px !important;
+} 
+
+.dashboard_calendar div.PrivatePickersToolbar-root button
+{
+  display: none !important;
+}
+.subscribeToPremiumBtn:hover {
+  color:white !important;
+}
+@media only screen and ((min-width: 1200px) or (max-width: 360px) )
+  {
+  .dashboard_calendar div[role="cell"]>button.MuiButtonBase-root,
+  .dashboard_calendar div[role="cell"]>div.MuiPickersDay-root,
+  .dashboard_calendar span.MuiTypography-root
+  {
+      width: 28px;
+  }
+
+  .dashboard_calendar>div:first-child
+  {
+    min-width: auto;
+  }
+
+  .dashboard_calendar>div:first-child>div:first-child .PrivatePickersToolbar-root ~ div
+  {
+    width:auto
+  }
+
+  /* .dashboard_calendar .MuiCalendarPicker-root>div:first-child */
+  .dashboard_calendar>div:first-child>div:first-child .PrivatePickersToolbar-root ~ div > .MuiCalendarPicker-root:first>div:first-child
+  {
+    margin-top:0px;
+    margin-bottom:0px;
+    padding-left:16px;
+    padding-right: 0px;
+
+  }
+
+
+  .dashboard_calendar .MuiCalendarPicker-root
+  {
+    width:auto
+  }
+
+  .dashboard_calendar button.MuiIconButton-edgeEnd ~ div,
+  .dashboard_calendar .PrivatePickersToolbar-root>span:first-child,
+  .dashboard_calendar .PrivateDatePickerToolbar-penIcon
+  {
+    display: none
+  }
+
+  .dashboard_calendar .PrivatePickersFadeTransitionGroup-root div:first-child
+  {
+    font-size:0.9rem
+  }
+
+  .dashboard_calendar .PrivatePickersSlideTransition-root
+  {
+    min-height:240px
+  }
+}
+
+#home_slider .slick-slider ul.MuiBox-root
+{
+  bottom : 0px!important  
+}
+
+
+.card-overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  /* background-color: #e67e22; */
+  transform: scale(0);
+  transition: .4s;
+  border-radius: 5px;
+}
+
+.card-parent:hover .card-overlay{
+  color: #fff;
+  transform: scale(1);
+  background-color: rgba(178,150,3, 0.416);
+}
+
+.columna{
+  float:left;
+  width:75%;
+}
+.columnb{
+  float:left;
+  width:25%;
+  border-left: 1px solid darkgray;
+  position: relative;
+}
+
+.hintlabel{
+  margin-top: 19px;
+  font-family: Trebuchet MS;
+  width: 600px;
+  padding-left: 20px;
+}
+.hintvalue{
+  margin-left: -600px;
+  margin-top: 13px;
+}
+.typelabel{
+  margin-top: 19px;
+  margin-left: 320px;
+  font-family: Trebuchet MS;
+}
+.typevalue{
+  margin-right: -570px;
+  float:right;
+  margin-top: 13px;
+}
+
+.marklabel{
+  margin-top: -41px;
+  margin-left: 695px;
+  font-family: Trebuchet MS;
+}
+.markvalue{
+  margin-top: -68px;
+}
+.savebtn{
+  float: right;
+  padding: 27px;
+}
+
+.btnsave{
+  background: linear-gradient(to left,#ff3399 0%, #3333cc 100%);
+  border: 1px solid linear-gradient(to left,#ff3399 0%, #3333cc 100%);
+  color: #fff;
+}
+
+.btnpre{
+  border-radius: 50%;
+  background-color: rgba(178,150,3, 0.416);
+  border: 1px solid rgba(178,150,3, 0.416);;
+  color: #fff;
+  width: 80%;
+}
+
+.btnnext{
+  border-radius: 50%;
+  background-color: rgba(178,150,3, 0.416);
+  border: 1px solid rgba(178,150,3, 0.416);;
+  color: #fff;
+  width: 80%;
+}
+
+.btnblue{
+  width:5%;
+  background: #1f188a;
+  padding: 5%;
+}
+
+.btnGold{
+  width:5%;
+  background: #d1b552;
+  padding: 5%;
+}
+
+.btnGrey{
+  width:5%;
+  background: #9c9a92;
+  padding: 5%;
+}
+
+.btnGrey1{
+  background: #9c9a92;
+  margin-left: 5px;
+  font-size: .7em;
+  width: 30px;
+  color: #fff;
+}
+.btnGold1{
+  background: #d1b552;
+  margin-left: 5px;
+  font-size: .7em;
+  width: 30px;
+  color: #fff;
+}
+
+.btnpink{
+  width:5%;
+  background: #f036c1;
+  padding: 5%;
+}
+.btnpink1{
+ 
+  background: #f036c1;
+  margin-left: 5px;
+  font-size: .7em;
+  width: 30px;
+  color: #fff;
+}

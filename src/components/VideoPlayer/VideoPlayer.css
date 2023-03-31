@@ -1,0 +1,17 @@
+.pause>svg:hover, .rewind:hover, .forward:hover{
+    fill: #2c64e6;
+    scale: 1.05;
+}
+.pause>svg, .rewind, .forward{
+    font-size: 30px;
+    fill: white;   
+}
+@keyframes example{
+    from {background-image: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.02)) ;}
+    to {background-image: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.02));}
+}
+.controls:hover{
+    /* background: rgba(0,0,0,.4); */
+    animation-name: example;
+    animation-duration: 2s;
+}

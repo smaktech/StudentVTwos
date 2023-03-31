@@ -1,0 +1,298 @@
+.MuiListItemButton-root {
+    background: rgba(0, 0, 0, 0.05) !important;
+}
+
+a{
+    color: black !important;
+}
+
+.css-cyq4hr {
+    background: rgb(229, 226, 226) !important;
+}
+
+.css-66aew8{
+    background: rgb(229, 226, 226) !important;
+}
+.MuiLoadingButton-root{
+    background: rgb(238, 223, 9) !important;
+    color: #FFFFFF !important;
+}
+.css-q2v5of-MuiButtonBase-root-MuiCheckbox-root.Mui-checked  {
+    color: rgb(238, 223, 9) !important;
+
+} 
+.MuiButton-root{
+    background: rgb(238, 223, 9) !important;
+    color: #FFFFFF !important;  
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+a{
+  text-decoration: none !important;
+  color: #131110 !important;
+}
+
+#page-content-wrapper{
+  /* background-color: #EAD7D1 !important */
+}
+.container-fluid{
+  padding: 0px 0px;
+}
+
+.clr-primary-400 {
+  background-color:  #000000;
+}
+.clr-primary-200{
+  background-color: #c0ae0c;
+;
+}
+
+.clr-primary-100{
+  background-color: #514974
+}
+
+
+.clr-danger-100 {
+  background-color: rgba(255, 0, 0, 0.5);
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.txt-5282F0{
+  color: #1F1A38;
+}
+
+.min100vh{
+  min-height: 100vh;
+}
+  
+.materialTable{
+  color:#1F1A38
+}
+
+.MuiTableHead-root{ 
+  background-color:#1F1A3814 !important
+  
+}
+td.MuiTableCell-root{
+  color:#1F1A38 !important
+}
+th[class^='MuiTableCell-root']{
+  background-color:#1F1A3814 !important;
+  color:#1F1A38 !important
+
+}
+.materialTableHeader{
+  background-color:#1F1A3814 !important
+}
+
+.borderRadius0{
+  border-radius: 10px !important;
+}
+ 
+
+landing-page-wrapper {
+  height: 100vh;
+  width: 100vw;;
+}
+
+/* LOGIN / SIGNUP PAGE */
+.title-heading {
+  font-size: 45px;
+  padding-top: 5vh;
+  font-weight: 700;
+  color:#000000
+}
+.title-sub-heading{
+  font-size: 40px;
+  font-weight: 700;
+  color:#000000
+}
+.mainPageContent
+{   
+  background-color: #EAD7D1 !important
+}
+.pageHeaderCard
+{
+  /* border: 1px solid grey;
+  border-radius:5; */
+  background-color: #EAD7D1
+}
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link
+{
+  
+  background-color: #f6fbfd!important;
+  color:rgb(107, 78, 78) !important;
+}
+.nav-link.active
+{
+  color:white !important;
+}
+.form-control,.form-select
+{
+   
+  background-color: #e0d6dd !important;
+ 
+}
+.authInputs
+{
+   
+  background-color: #6f6c6e !important;
+ 
+  border-top-left-radius: 0px !important;
+  border-bottom-left-radius: 0px !important;
+}
+.inputIcon
+{
+  background-color: #6f6c6e !important;
+  padding-left: 2px;
+  
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.card
+{
+  background-color: rgba(0, 0, 0, 0.15) !important
+}
+.MuiPaper-root
+{
+  /* background-color: #EAD7D1 !important */
+}
+.AuthCard {
+  min-height: 15rem !important;
+  min-width: 15rem;
+  
+  /* Sets height of auth card to be minimum specified  */
+  padding: 10vw 10vh;
+  /* max-width: 10vw; */
+  
+  background-color: #EAD7D1;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+.AuthCard .btn-primary {
+  color: #EAD7D1;
+  
+  min-width: 20vw;
+  max-width: 40vw;
+}
+
+.labelColor{
+  color: #1F1A38;
+}
+
+.AuthCard .title-heading {
+  
+  font-size: 36px;
+}
+.heading-color-white
+{
+  color:white
+}
+.AuthCard p {
+  color: #1F1010;
+  text-decoration: none;
+}
+.rounded-xl {
+  border-radius: 10px;
+}
+
+/* Custom Width Classes */
+.w-10 { width: 10% !important; }
+.w-20 { width: 20% !important; }
+.w-30 { width: 30% !important; }
+.w-40 { width: 40% !important; }
+.w-60 { width: 60% !important; }
+.w-70 { width: 70% !important; }
+.w-80 { width: 80% !important; }
+.w-90 { width: 90% !important; }
+
+/* Form Control Design */
+.styled-form-group {
+  
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #1F1010;
+}
+.styled-form-groupa {  
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid red;
+}
+
+.styled-form{
+  max-width: 100%;
+  padding-left:5px;
+  outline: none;
+  border: none;
+}
+.AuthCard input[type=email] {
+  border: none;
+  outline: none;
+  box-shadow : none;
+  color: #1F1010;
+  background-color: #6f6c6e;
+  font-size: 22px;
+  font-weight: 600;
+}
+.AuthCard input[type=password] {
+  border: none;
+  outline: none;
+  box-shadow : none;
+  color: #1F1010;
+  background-color: #6f6c6e;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.input-group .input-group-prepend .input-group-text{
+  background-color: none;
+}
+
+/* Cursor Pointer */
+.cursor-pointer { cursor: pointer !important; }
+
+/* custom button  colors */
+.btn-primary {
+  color: #FFFFFF;
+  border: #B29603 !important;
+  background-color: #B29603 !important;
+}
+.verticleLine{
+  border-left: 6px solid green;
+  height: 50px; 
+}
+
+.m0AutoImp{
+  margin: 0 auto !important;
+}
+
+
+
+@media (-webkit-device-pixel-ratio: 1.50) {
+  *{
+    zoom: 0.98;
+  }
+  .min100vh{
+    min-height: 120vh;
+  }
+}
+
+
+@media (-webkit-device-pixel-ratio:1.00){
+  *{
+    zoom : 0.98;
+  }
+  .min100vh{
+    min-height: 120vh;
+  }
+}
+
+
+.modal.fade {
+  z-index: 10000000 !important;
+} 

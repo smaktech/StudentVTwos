@@ -1,0 +1,416 @@
+html,body {
+    margin:0;
+    padding:0;
+    overflow-x:hidden;
+}
+.evalr-btn {
+    float: right;
+    margin-top: 20px;
+    align-items: center;
+    size: 50px;
+}
+.responsive-iframe{
+    
+    width: 100%;
+}
+.coursename{
+    margin-left: 60.2%;
+    margin-top: -13%;
+}
+
+.btnadd {
+    margin-left: 104%;
+    margin-top: -15%;
+
+}
+
+.btnsub {
+    margin-left: 112%;
+    margin-top: -6.5%;
+}
+
+
+.btnai {
+    min-width: 0 !important;
+    width: 30px;
+    
+}
+
+.btnsi {
+    min-width: 0 !important;
+    width: 30px;
+}
+
+.si {
+    margin-left: 70px;
+    margin-top: 8px;
+}
+
+.qualification {
+    margin-top: -85px;
+    margin-left: 400px;
+}
+
+.selectsub {
+    margin-top: 5%;
+    margin-left: 0%;
+}
+
+.desc {
+    width: 120.3%;
+
+}
+
+.hint1 {
+    margin-left: 240px;
+    margin-top: 20%;
+}
+
+
+
+
+.answer1 {
+    margin-left: 50px;
+    margin-top: 30px;
+}
+
+.ans1 {
+    margin-left: -270%;
+    margin-top: 10%;
+    width: 470%;
+}
+.addevalans {
+    margin-left: 1%;
+    margin-top: 10%;
+    width: 250%;
+}
+.testdiv{
+    display: flex;
+    /* justify-content: flex-end; */
+    width: 200%;
+    height: 80%;
+}
+.testbtn{
+    display: flex;
+    margin-left: 0%;
+    position: absolute;
+    bottom: 17%;
+    justify-content: space-between;
+    width: 100%;
+}
+.testtype{
+    margin-left: 3%;
+    
+}
+.testmarks{
+    margin-left: 3%;
+}
+.IV {
+    margin-left: 110%;
+    margin-top: 10%;
+    width: 100%;
+    height: 50%;
+    
+}
+.marks {
+    margin-left: -17%; 
+}
+.type1{
+    margin-top: -55%;
+    width: 90%;
+    margin-left: 140%;
+    
+}
+.textfield{
+    height: 80%;
+    width: 100%;
+}
+.marks3 {
+    margin-left: 160%;
+    margin-top: -60%;
+    width: 120%;
+}
+.hint {
+    margin-left: 25%;
+    margin-top: 70px;
+}
+.media1{
+    width: 65%;
+    margin-left: 16%;
+}
+.hint4{
+    margin-left: 1%;
+    width: 20%;
+    margin-top: 2%;
+}
+.ques1{
+    width: 65%;
+    margin-left: 16%;
+}
+
+.ques5 {
+    width: 190%;
+    margin-left: 4%;
+    margin-top: 20px;
+
+}
+.media{
+    width: 200%;
+    margin-left: 52%;
+}
+.fieldhead {
+    padding: 5px;
+    margin-top: 10px;
+}
+
+.imageviewer {
+    margin-left: 136%;
+    margin-top: -30%;
+    color: aqua;
+    font-size: small;
+}
+
+.IV {
+    margin-left: 50%;
+    margin-top: 10%;
+    width: 100%;
+    height: 40%;  
+}
+.imght {
+    height: 100.6%;
+    
+}
+.nav{
+    margin-left: 80%;
+    width: 120%;
+
+}
+
+
+.formbg {
+    outline-color: aqua;
+}
+
+.ig {
+    font-size: larger;
+
+}
+
+.border {
+    padding: 5px;
+}
+
+.btnnxt {
+    margin-top: -50px;
+    margin-left: 34.8%;
+}
+
+
+
+.addevalnxtbtn{
+    margin-top: 1%;
+    margin-left: 100%;
+}
+.buttons-flex {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+}
+
+.buttons-flex11 button,.buttons-flex12 button,
+.buttons-flex13 button,.buttons-flex14 button,
+.buttons-flex15 button,.buttons-flex16 button,
+.buttons-flex button,.buttons-flex2 button,
+.buttons-flex3 button,.buttons-flex4 button,
+.buttons-flex5 button,.buttons-flex6 button,
+.buttons-flex7 button,.buttons-flex8 button,
+.buttons-flex9 button,.buttons-flex10 button,
+.buttons-flex17 button {
+    background-color: grey;
+    color:white
+    
+
+}
+
+.buttons-flex10,.buttons-flex11,.buttons-flex12,.buttons-flex13,.buttons-flex14,.buttons-flex15,.buttons-flex16,.buttons-flex17
+,.buttons-flex
+,.buttons-flex2
+,.buttons-flex3
+,.buttons-flex4
+,.buttons-flex5
+,.buttons-flex6
+,.buttons-flex7
+,.buttons-flex8
+,.buttons-flex9
+ {
+    margin-top: 3px;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+}
+.Score{
+    width: -60px;
+}
+.tchsbma{
+    
+    width: 48%;
+    
+}
+.stusbans{
+    width: 48%;
+}
+.stdrvbg{
+   
+    background-color:rgba(178,150,1, 0.416);
+    border-radius: 6px;
+    padding: 30px;
+}
+.mcqtypes{
+    display: flex;
+    /* width: 200%; */
+    
+}
+.option{
+    margin-left: 1%;
+}
+.myevlsm{
+    display: flex;
+    margin-left: -50%;
+}
+.stuflex{
+    display: flex;
+    justify-content: space-between;
+}
+.marks5 {
+    margin-left: 2%;
+    width: 230px;
+}
+.smdiv{
+    display: flex;
+    margin: 10px 0;
+}
+.singleques{
+    
+    margin-top: 0%;
+}
+.singleIV{
+    margin-left: 110%;
+    margin-top: -60%;
+    width: 80%;
+}
+.singletype{
+    margin-left: 47%;
+    margin-top: -23.1%;
+}
+.singlemarks{
+    margin-left: 86%;
+    margin-top: -23.1%;
+}
+.singleansrev{
+    margin-top: 20%;
+    width: 120%;
+    margin-left: -3%;    
+}
+.nextbut{
+    
+    margin-top: -12%;
+    
+}
+.nextpre{
+    margin-left: 0%;
+    margin-top: -12%;
+}
+.pagination{
+    margin-left: 20%;
+    width: 100%;
+}
+.pagination > li{
+    margin-left: 0%;
+    padding: 10%;
+}
+.pagination > li > a{
+    margin-left: 20%;
+    padding: 20%;
+    width: 100%;
+}
+.finish{
+    margin-left: 0%;
+    position: absolute;
+    bottom: 3%;
+    width: '100%'
+    /* margin-top: 15%; */
+}
+.submitBtn{
+    margin-left: 0%;
+    position: absolute;
+    bottom: 10%;
+    width: '100%'
+}
+.Score{
+    margin-left: 33%;
+}
+.save{
+    margin-left: 81%;
+    margin-top: -6%;
+}
+/* .stdques{
+    width: 500%;
+} */
+.stutest{
+    display: flex;
+    /* width: 300%; */
+    padding: 30px;
+   /* border: 1px solid #C4CDD5;*/
+  /*  background-color: cadetblue;*/
+    border-radius: 5px;
+    /* justify-content: flex-end; */
+}
+.teststd{
+    border: 1px solid #C4CDD5 ;
+    /* width: 289.8%; */
+    background-color: #fff;
+    margin-top: -6px;
+    padding: 30px;
+    margin-left: 0.4%;
+}
+
+.stdtype{
+    margin-left:3%;
+}
+.viewmedia{
+    margin-left: -7%;
+    margin-top: 25px;
+    
+}
+.lasthrview{
+    width: 280%;
+}
+.adminoriginalans{
+    margin-top: 10%;
+    width: 220%;
+    margin-left: -46%;
+
+}
+.originalans{
+    display: flex;
+}
+.events{
+    margin-top: 2%;
+}
+/*.vlview{
+   border-left: 1.5px solid gray;
+    height: 200px;
+    color: 1.5px solid gray;
+    margin-left: 8%;
+    margin-top: 1%;
+}*/
+.testans{
+    width: 200%;
+}
+.questionid{
+font-size: 2rem;
+border: 1px solid #fff;
+margin-left: -38px;
+}
