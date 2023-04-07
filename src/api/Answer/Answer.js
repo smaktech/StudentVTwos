@@ -80,10 +80,10 @@ async function getAnswerapi2(answer,marks,type){
             'Content-Type': 'application/json',
             'x-api-key': 'EtUXgJMobD2i4UPgnlqXU1d8QUROnKVJ47taTgEL',
             'Host' : '5dt79jqb97.execute-api.us-east-2.amazonaws.com',
-            // 'Access-Control-Allow-Origin' : 'https://5dt79jqb97.execute-api.us-east-2.amazonaws.com',
-            // //'Content-Length':'100',
-            // 'Access-Control-Allow-Methods':'POST, GET, OPTIONS, DELETE',
-            // 'Access-Control-Allow-Headers' :'*'
+            'Access-Control-Allow-Origin' : '*',
+            //'Content-Length':'100',
+            'Access-Control-Allow-Methods':'POST, GET, OPTIONS, DELETE',
+            'Access-Control-Allow-Headers' :'*'
         },
         body: JSON.stringify({  userInput: answer,expectedAnswer: marks,isMath: type })
     };
