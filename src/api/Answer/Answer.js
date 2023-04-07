@@ -1,5 +1,6 @@
 import { apiUrl } from '../../index';
 import { objToQueryString } from '../../config'
+import { id } from 'date-fns/locale';
 // const express = require('express');
 // const cors = require('cors');
 
@@ -61,6 +62,45 @@ async function getSingleAnswer(id) {
     // console.log('request from getAnswerapi');
     return data;
 }
+async function getAnswerapi2(answer,marks,type){
+// const getAnswerapi =async(answer,marks) => {
+    // alert('data');
+    let jsonval=JSON.stringify({
+        "userInput": answer,
+        "expectedAnswer": marks,
+        "isMath": type
+    });
+    alert(jsonval);
+
+    const requestOptions = {
+        method: 'POST',       
+        // mode: 'cors',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+            'x-api-key': 'EtUXgJMobD2i4UPgnlqXU1d8QUROnKVJ47taTgEL',
+            'Host' : '5dt79jqb97.execute-api.us-east-2.amazonaws.com',
+            // 'Access-Control-Allow-Origin' : 'https://5dt79jqb97.execute-api.us-east-2.amazonaws.com',
+            // //'Content-Length':'100',
+            // 'Access-Control-Allow-Methods':'POST, GET, OPTIONS, DELETE',
+            // 'Access-Control-Allow-Headers' :'*'
+        },
+        body: JSON.stringify({  userInput: answer,expectedAnswer: marks,isMath: type })
+    };
+    var apiLink;
+    
+
+    apiLink = 'https://5dt79jqb97.execute-api.us-east-2.amazonaws.com/default/score' ;
+
+    const data = await fetch(`${apiLink}`, requestOptions).then((res) => res.json());
+    alert('Server api push alert', data);
+
+   
+    // console.log('Answer Score api', data)
+    // console.log('request from getAnswerapi');
+    return data;
+}
+
 async function getAllCourses(page, limit) {
     const queryString = objToQueryString({
         page: page,
@@ -236,4 +276,4 @@ async function getAllUserCourses(userID) {
     return data;
 }
 
-export { createAnswer, getAllCourses, getSingleAnswer,getAnswerapi }
+export { createAnswer, getAllCourses, getSingleAnswer,getAnswerapi ,getAnswerapi2}

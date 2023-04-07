@@ -55,7 +55,8 @@ import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
 
 // ----------------------------------------------------------------------
-export const baseUrl ='http://testlime.portech.co';
+//export const baseUrl ='http://testlime.portech.co';
+export const baseUrl ='https://acadameapi.cdssapps.in';
 // export const baseUrl = 'http://server.cdssapps.in:4000';
 
 // export const baseUrl = 'https://acadme-backend.herokuapp.com';

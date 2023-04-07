@@ -6,7 +6,7 @@ import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
 import FormLabel from '@mui/material/FormLabel';
 import FormControlLabel from '@mui/material/FormControlLabel';
-import { createAnswer, getSingleAnswer, getAnswerapi } from '../../api/Answer/Answer'
+import { createAnswer, getSingleAnswer, getAnswerapi,getAnswerapi2 } from '../../api/Answer/Answer'
 import { getQuestion } from '../../api/Question/Question'
 import { createStudentevalans } from '../../api/StudentEvalAns/studentevalans'
 import { createStudenteval } from '../../api/StudentEval/studenteval'
@@ -804,11 +804,13 @@ if(course2.length==0){
             var studevalid1 = await createStudenteval(course2, subject3, evalid, studentname, examdatetaken)
             setStudevalid(studevalid1)
             // console.log('WORKING STUDEVALIDVAR', studevalid)
+            getAnswerapi2(answer,marks,type)
             createStudentevalans(studevalid1, answerstud, answer, question, hint, marks, type, stuevalid, evalansid, questionid, qmark)
             // console.log('studentevalans', createStudentevalans)
+           
         }
         else if (studevalid != 0) {
-
+            getAnswerapi2(answer,marks)
             var studevalid115 = createStudentevalans(studevalid, answerstud, answer, question, hint, marks, type, stuevalid, evalansid, questionid, qmark)
             console.log('studentevalans', createStudentevalans)
 
