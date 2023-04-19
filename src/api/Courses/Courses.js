@@ -3,6 +3,7 @@ import { apiUrl } from '../../index';
 
 // //Fetch all Resourse data using offset and limit!
 async function getAllCourses(page, limit) {
+    try{
     const queryString = objToQueryString({
         page,
         limit
@@ -20,11 +21,15 @@ async function getAllCourses(page, limit) {
         },
     }).then((res) => res.json());
     return data;
+}catch(error){
+    alert(error);
+}
 }
 
 
 
 async function getCoursesByFilter(searchString, boardID, subjectID) {
+    try{
     const queryString = objToQueryString({
         searchString,
         boardID,
@@ -44,9 +49,14 @@ async function getCoursesByFilter(searchString, boardID, subjectID) {
     }).then((res) => res.json());
     return data;
 }
+catch(error){
+    alert(error);
+}
+}
 
 // // Fetch all subject data using offset and limit!
 async function getAllSubjects(page, limit) {
+    try{
     const queryString = objToQueryString({
         page,
         limit
@@ -65,10 +75,15 @@ async function getAllSubjects(page, limit) {
     }).then((res) => res.json());
     return data;
 }
+catch(error){
+    alert(error);
+}
+}
 
 
 // //Fetch all boards data using offset and limit!
 async function getAllBoard(page, limit) {
+    try{
     const queryString = objToQueryString({
         page,
         limit,
@@ -87,9 +102,14 @@ async function getAllBoard(page, limit) {
     }).then((res) => res.json());
     return data;
 }
+catch(error){
+    alert(error);
+}
+}
 
 // //api to get the details of a particular courses by sending the courdseId
 async function getCourseById(courseID) {
+    try{
     const data = await fetch(`${apiUrl}/course/getCourseById/${courseID}`, {
         method: 'GET',
         headers: {
@@ -98,6 +118,9 @@ async function getCourseById(courseID) {
         },
     }).then((res) => res.json());
     return data;
+}catch(error){
+    alert(error);
+}
 }
 
 // //api to get the details of a particular topic by sending the userID and courdseId
@@ -115,6 +138,7 @@ async function getUserCourseById(userID, courseID) {
 
 // //api to get the topics of a course
 async function getCourseTopics(courseID) {
+    try{
     const data = await fetch(`${apiUrl}/topic/getCourseTopics/${courseID}`, {
         method: 'get',
         headers: {
@@ -123,9 +147,13 @@ async function getCourseTopics(courseID) {
         },
     }).then((res) => res.json());
     return data;
+}catch(error){
+    alert(error);
+}
 }
 // //api to get all courses of user
 async function getAllUserCourses(userID) {
+    try{
     const data = await fetch(`${apiUrl}/userCourse/getAllUserCourses/${userID}`, {
         method: 'GET',
         headers: {
@@ -134,6 +162,9 @@ async function getAllUserCourses(userID) {
         },
     }).then((res) => res.json());
     return data;
+}catch(error){
+    alert(error);
+}
 }
 
 
@@ -172,6 +203,7 @@ async function userNotesById(userID, note) {
 }
 // //api function for getting notes 
 async function getUserNotesById(userID) {
+    try{
     const data = await fetch(`${apiUrl}/userNote/all/${userID}`, {
         method: 'GET',
         headers: {
@@ -180,9 +212,13 @@ async function getUserNotesById(userID) {
         }
     }).then((res) => res.json());
     return data;
+}catch(error){
+    alert(error);
+}
 }
 // //api function for deleting notes
 async function deleteUserNotesByUserIdAndNoteId(userID, noteID) {
+    try{
     console.log(userID, noteID)
     const data = await fetch(`${apiUrl}/userNote/delete/${userID}/${noteID}`, {
         method: 'DELETE',
@@ -192,6 +228,9 @@ async function deleteUserNotesByUserIdAndNoteId(userID, noteID) {
         }
     }).then((res) => res.json());
     return data;
+}catch(error){
+    alert(error);
+}
 }
 
 async function updateNoteByUserIdAndNoteId(userID, noteID, note) {

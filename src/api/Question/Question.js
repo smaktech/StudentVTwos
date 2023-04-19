@@ -4,7 +4,7 @@ import { objToQueryString } from '../../config'
 //Fetch all course data using offset and limit!
 async function getQuestion(id) {
     // console.log('request from client done');
-
+try{
     var apiLink;
     
         apiLink = apiUrl + '/question/getQuestion?id='+ id
@@ -24,6 +24,10 @@ async function getQuestion(id) {
 
    console.log('Get Question Table iD', data)
     return data;
+}
+catch(error){
+    alert(error);
+}
 }
 
 

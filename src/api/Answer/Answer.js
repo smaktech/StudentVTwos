@@ -1,6 +1,7 @@
 import { apiUrl } from '../../index';
 import { objToQueryString } from '../../config'
 import { id } from 'date-fns/locale';
+const axios = require('axios')
 // const express = require('express');
 // const cors = require('cors');
 
@@ -12,7 +13,7 @@ import { id } from 'date-fns/locale';
 //Fetch all course data using offset and limit!
 async function getSingleAnswer(id) {
     // console.log('request from client done');
-
+try{
     var apiLink;
 
     apiLink = apiUrl + '/answer/getAnswer?id=' + id
@@ -33,7 +34,12 @@ async function getSingleAnswer(id) {
     // console.log('Get single answer api', data)
     return data;
 }
+catch(error){
+    alert(error);
+}
+}
  const getAnswerapi =async ()=> {
+    try{
     // alert('data');
     
     var apiLink;
@@ -62,7 +68,33 @@ async function getSingleAnswer(id) {
     // console.log('request from getAnswerapi');
     return data;
 }
-async function getAnswerapi2(answer,marks,type){
+catch(error){
+    alert(error);
+}
+}
+
+ 
+async function getAnswerapi2(userInput, expectedAnswer,isMath) {
+    try{
+    const data = await fetch(`${apiUrl}/answer/GetScore`, {
+      method: 'POST',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
+      
+      body: JSON.stringify({userInput, expectedAnswer,isMath}),
+    }).then((res) => res.json());
+  
+  
+    return data;
+}
+catch(error){
+    alert(error);
+}
+  }
+
+async function getAnswerapi3(answer,marks,type){
 // const getAnswerapi =async(answer,marks) => {
     // alert('data');
     let jsonval=JSON.stringify({
@@ -80,10 +112,10 @@ async function getAnswerapi2(answer,marks,type){
             'Content-Type': 'application/json',
             'x-api-key': 'EtUXgJMobD2i4UPgnlqXU1d8QUROnKVJ47taTgEL',
             'Host' : '5dt79jqb97.execute-api.us-east-2.amazonaws.com',
-            'Access-Control-Allow-Origin' : '*',
-            //'Content-Length':'100',
-            'Access-Control-Allow-Methods':'POST, GET, OPTIONS, DELETE',
-            'Access-Control-Allow-Headers' :'*'
+            // 'Access-Control-Allow-Origin' : 'https://5dt79jqb97.execute-api.us-east-2.amazonaws.com',
+            // //'Content-Length':'100',
+            // 'Access-Control-Allow-Methods':'POST, GET, OPTIONS, DELETE',
+            // 'Access-Control-Allow-Headers' :'*'
         },
         body: JSON.stringify({  userInput: answer,expectedAnswer: marks,isMath: type })
     };
@@ -100,6 +132,75 @@ async function getAnswerapi2(answer,marks,type){
     // console.log('request from getAnswerapi');
     return data;
 }
+// async function getAnswerapi2(answer,marks,type){
+//     // var apiLink;
+//     // apiLink = 'http://testsims.portech.co/api/default' ;
+//     // const data1 = await fetch(apiLink, {
+//     //     method: 'POST',
+//     //     headers: {
+//     //       Accept: 'application/json',
+//     //       'Content-Type': 'application/json',
+//     //        'Access-Control-Allow-Origin' : 'http://testsims.portech.co',
+//     //         //'Content-Length':'100',
+//     //         'Access-Control-Allow-Methods':'POST, GET, OPTIONS, DELETE',
+//     //         'Access-Control-Allow-Headers' :'Origin, Accept, x-auth-token, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers',
+//     //         'Access-Control-Allow-Credentials':'true'
+//     //     },
+//     //     body: JSON.stringify({  userInput: answer,expectedAnswer: marks,isMath: type }),
+//     //   }).then((res) => res.json());
+
+//     //   alert('Acadame api push alert', data);
+
+// // const getAnswerapi =async(answer,marks) => {
+//     // alert('data');
+//     let jsonval=JSON.stringify({
+//         "userInput": answer,
+//         "expectedAnswer": marks,
+//         "isMath": type
+//     });
+//     alert(jsonval);
+
+//     const requestOptions = {
+//         method: 'POST',       
+//         // mode: 'cors',
+//         headers: {
+//             'Accept': 'application/json',
+//             'Content-Type': 'application/json',
+//             //'x-api-key': 'EtUXgJMobD2i4UPgnlqXU1d8QUROnKVJ47taTgEL',
+//             //'Host' : 'https://5dt79jqb97.execute-api.us-east-2.amazonaws.com',
+//             //'Access-Control-Allow-Origin' : 'http://localhost:3000',
+//             //'Content-Length':'100',
+//             //'Access-Control-Allow-Methods':'POST, GET, OPTIONS, DELETE',
+//             //'Access-Control-Allow-Headers' :'Origin, Accept, x-auth-token, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers',
+//             //'Access-Control-Allow-Credentials':'true'
+//         },
+//         body: JSON.stringify({  userInput: answer,expectedAnswer: marks,isMath: type })
+//     };
+//    // var apiLink;
+    
+
+//     //apiLink = 'https://5dt79jqb97.execute-api.us-east-2.amazonaws.com/default/score' ;
+   
+
+// //   const dfd=  axios({
+// //         method: 'GET',
+// //         url: `${apiLink}`,
+// //         headers: {  'Accept': 'application/json',
+// //         'Content-Type': 'application/json',
+// //         'x-api-key': 'EtUXgJMobD2i4UPgnlqXU1d8QUROnKVJ47taTgEL',
+// //         'Host' : 'https://5dt79jqb97.execute-api.us-east-2.amazonaws.com', },
+// //         data:JSON.stringify({  userInput: answer,expectedAnswer: marks,isMath: type })
+// //     })
+// //     alert('Server api push get alert', data);
+
+//     const data = await fetch(`${apiLink}`, requestOptions).then((res) => res.json());
+//     alert('Server api push alert', data);
+
+   
+//     // console.log('Answer Score api', data)
+//     // console.log('request from getAnswerapi');
+//     return data;
+// }
 
 async function getAllCourses(page, limit) {
     const queryString = objToQueryString({

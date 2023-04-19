@@ -512,7 +512,7 @@ export default function User(props) {
 
                                 {/*<Form.Control readOnly={true} type="text" value={res.qmark} name='text' style={{width:"26%"}}  onChange={(e) => setType(e.target.value)}></Form.Control>*/}
 
-                                <Form.Control readOnly={true} type="text" value='1' style={{ width: "26%" }} onChange={(e) => setType(e.target.value)}></Form.Control>
+                                <Form.Control readOnly={true} type="text" value={res.qmark} style={{ width: "26%" }} onChange={(e) => setQmark(e.target.value)}></Form.Control>
 
                             </Form.Group>
                         </div>

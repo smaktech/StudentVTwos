@@ -2,6 +2,7 @@ import { apiUrl } from '../../index';
 
 // //api connection for student signup
 async function paymentGetway(priceID, quantity, courses, userID,amount) {
+    try{
     const data = await fetch(`${apiUrl}/subcription/create-checkout-session`, {
         method: 'POST',
         headers: {
@@ -12,7 +13,9 @@ async function paymentGetway(priceID, quantity, courses, userID,amount) {
     }).then((res) => res.json());
 
     return data;
-
+}catch(error){
+    alert(error);
+}
 }
 
 async function addToCart(courseID, userID) {

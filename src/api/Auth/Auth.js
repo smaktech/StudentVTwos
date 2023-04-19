@@ -2,6 +2,9 @@ import { apiUrl } from '../../index';
 
  
 async function RestLogin(email, password) {
+  try{
+
+  
   const data = await fetch(`${apiUrl}/auth/login`, {
     method: 'POST',
     headers: {
@@ -13,7 +16,10 @@ async function RestLogin(email, password) {
 
 
   return data;
-
+  }
+  catch(error){
+    
+  }
 }
  
 async function RestSignup(email, password, name,phoneNumber, school) {

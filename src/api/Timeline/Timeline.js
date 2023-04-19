@@ -4,6 +4,7 @@ import { apiUrl } from '../../index';
 
 // //api function for getting notes 
 async function getTimelineByUserId(userID, date) {
+    try{
     
     const data = await fetch(`${apiUrl}/userTimeline/${userID}/?date=${date}`, {
         method: 'GET',
@@ -14,6 +15,9 @@ async function getTimelineByUserId(userID, date) {
     })
         .then((res) => res.json());
     return data;
+}catch(error){
+    alert(error);
+}
 }
 // //api function for getting notes 
 async function getAllTimelineByUserId(userID) {

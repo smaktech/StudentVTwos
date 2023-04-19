@@ -2,7 +2,7 @@
   "name": "@minimal/minimal-kit-react",
   "homepage": "http://student.cdssapps.in",
   "author": "minimals.cc",
-  "version": "1.3.2.3",
+  "version": "1.3.3",
   "private": true,
   "scripts": {
     "start": "react-scripts start",

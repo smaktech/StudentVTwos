@@ -105,6 +105,7 @@ import buttonGroup from './buttongroup';
 import ButtonGroup from 'src/theme/overrides/ButtonGroup';
 import { width } from '@mui/system';
 import { grey } from '@mui/material/colors';
+import { status } from 'nprogress';
 
 
 // import test2 from './test';
@@ -276,7 +277,7 @@ export default function User(props) {
     const [stuevalid, setStuevalid] = useState()
     const [evalansid, setEvalansid] = useState()
     const [questionid, setquestionid] = useState()
-    const [qmark, setQmark] = useState()
+    const [qmark, setQmark] = useState('')
     // const [stuevalid, setstuevalid] = useState()
     const [evalid, setevalid] = useState()
     const [studentname, setStudentname] = useState()
@@ -804,13 +805,32 @@ if(course2.length==0){
             var studevalid1 = await createStudenteval(course2, subject3, evalid, studentname, examdatetaken)
             setStudevalid(studevalid1)
             // console.log('WORKING STUDEVALIDVAR', studevalid)
-            getAnswerapi2(answer,marks,type)
-            createStudentevalans(studevalid1, answerstud, answer, question, hint, marks, type, stuevalid, evalansid, questionid, qmark)
+            let qmarkval;
+            getAnswerapi2(answer,answerstud,type).then((res) => {
+
+             
+    
+                if (res.message.score == 1) {
+                  
+                    qmarkval=marks;
+              
+                createStudentevalans(studevalid1, answerstud, answer, question, hint, marks, type, stuevalid, evalansid, questionid, qmarkval)
+                } else {
+                
+                 qmarkval=0;
+                 createStudentevalans(studevalid1, answerstud, answer, question, hint, marks, type, stuevalid, evalansid, questionid, qmarkval)
+                }
+              
+    
+    
+            });
+           // createStudentevalans(studevalid1, answerstud, answer, question, hint, marks, type, stuevalid, evalansid, questionid, qmark)
+         
             // console.log('studentevalans', createStudentevalans)
            
         }
         else if (studevalid != 0) {
-            getAnswerapi2(answer,marks)
+            getAnswerapi2(answer,answerstud)
             var studevalid115 = createStudentevalans(studevalid, answerstud, answer, question, hint, marks, type, stuevalid, evalansid, questionid, qmark)
             console.log('studentevalans', createStudentevalans)
 

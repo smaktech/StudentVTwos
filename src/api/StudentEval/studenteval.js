@@ -3,6 +3,7 @@ import { objToQueryString } from '../../config'
 
 //Fetch all course data using offset and limit!
 async function Getallstudentevallist() {
+    try{
     // console.log('request from client done');
 
     var apiLink;
@@ -24,6 +25,9 @@ async function Getallstudentevallist() {
 
    console.log('Get Getallstudentevallist', data)
     return data;
+}catch(error){
+    alert(error);
+}
 }
 async function getAllCourses(page, limit) {
     const queryString = objToQueryString({
@@ -94,7 +98,7 @@ async function editCourse(courseID, name, boardID, subBoardID, classesID, subjec
 
 //api function for adding a course 
 async function createStudenteval( course2, subject3, evalid,studentname,examdatetaken    ) {
-
+try{
     //ne
     var details = {
         "course":course2,
@@ -123,7 +127,10 @@ async function createStudenteval( course2, subject3, evalid,studentname,examdate
 
       console.log(data);
       return data;
-      
+    }
+    catch(error){
+        alert(error);
+    }
 }
 
 //api to delete the course from the database

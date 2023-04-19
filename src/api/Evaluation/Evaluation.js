@@ -4,6 +4,7 @@ import { objToQueryString } from '../../config'
 
 //Fetch all course data using offset and limit!
 async function getAllEvaluation() {
+    try{
     var apiLink;
     
      apiLink = apiUrl + '/evaluation/getevaluationlist'
@@ -17,13 +18,16 @@ async function getAllEvaluation() {
     }).then((res) => res.json());
     // console.log('This is a GET ALLLECA',res.results.row.course)
     return data;
+}catch(error){
+    alert(error);
+}
     
 }
 
 
 async function getSingleEvaluation(id) {
     // console.log('request from client done');
-
+try{
     var apiLink;
     
         apiLink = apiUrl + '/evaluation/getEvaluation?id='+ id
@@ -44,8 +48,13 @@ async function getSingleEvaluation(id) {
 //    console.log('Get single answer api', data)
     return data;
 }
+catch(error){
+    alert(error);
+}
+}
 //Fetch all course data using offset and limit!
 async function getAllReview() {
+    try{
     const queryString = objToQueryString({
         // page: page,
         // limit: limit,
@@ -65,6 +74,9 @@ async function getAllReview() {
     }).then((res) => res.json());
     
     return data;
+}catch(error){
+    alert(error);
+}
 }
 
 //api function for update a course 
@@ -179,6 +191,7 @@ async function getEvaluationById(evaluation) {
 
 
 async function getEvaluationByFilter(searchString, startDate, endDate, sortByDate, status, board, subject) {
+    try{
     let obj = {
         board: board,
         subject: subject,
@@ -206,11 +219,15 @@ async function getEvaluationByFilter(searchString, startDate, endDate, sortByDat
         },
     }).then((res) => res.json());
     return data;
+}catch(error){
+    // alert(error);
+}
 
 }
 
 //api to get all courses of user
 async function getAllUserEvaluations(userID) {
+    try{
     const data = await fetch(apiUrl + '/userEvaluation/getAllUserEvaluations/' + userID, {
         method: 'GET',
         headers: {
@@ -219,6 +236,9 @@ async function getAllUserEvaluations(userID) {
         },
     }).then((res) => res.json());
     return data;
+}catch(error){
+    // alert(error);
+}
 }
 
 export { getAllEvaluation, getAllReview,editEvaluation, deleteCourse, getEvaluationByFilter, getEvaluationById,getSingleEvaluation, getAllUserEvaluations, createEvaluation }

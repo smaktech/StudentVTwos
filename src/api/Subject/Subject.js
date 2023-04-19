@@ -3,6 +3,7 @@ import { objToQueryString } from '../../config'
 
 //Fetch all subject data using offset and limit!
 async function getAllSubjects(page, limit) {
+  try{
   const queryString = objToQueryString({
     page: page,
     limit: limit,
@@ -20,6 +21,9 @@ async function getAllSubjects(page, limit) {
     },
   }).then((res) => res.json());
   return data;
+}catch(error){
+  // alert(error);
+}
 }
 
 
