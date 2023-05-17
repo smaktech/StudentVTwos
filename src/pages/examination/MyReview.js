@@ -216,9 +216,11 @@ export default function MyExams() {
             
                 // console.log('coursesData', res);
                 if (res.status) {
+                    const strDescendingReview = [...res.results].sort((a, b) =>
+                    a.createdAt > b.createdAt ? -1 : 1,);
                     //  //setting the fetched Topics into state variable
-                    setStudenteval(res.results);
-                    setTotalPages(res.results.totalPages);
+                    setStudenteval(strDescendingReview);
+                    setTotalPages(strDescendingReview.totalPages);
                     console.log('Getallstudentevallist students portal', res.results);
                 } else {
                     //  //setting no Topic found variable true

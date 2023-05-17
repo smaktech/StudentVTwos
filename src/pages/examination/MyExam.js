@@ -199,8 +199,13 @@ export default function MyExams() {
                 // console.log('coursesData', res);
                 if (res.status) {
                     //  //setting the fetched Topics into state variable
-                    setEvaluation(res.results);
-                    setTotalPages(res.results.totalPages);
+
+                    const strDescendingExam = [...res.results].sort((a, b) =>
+                    a.createdAt > b.createdAt ? -1 : 1,);
+                    //decending order
+
+                    setEvaluation(strDescendingExam);
+                    setTotalPages(strDescendingExam.totalPages);
                     console.log('Evaluation Data students portal', res.results);
                 } else {
                     //  //setting no Topic found variable true
